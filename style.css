@@ -1,0 +1,145 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	height: 100vh;
+	letter-spacing: 3px;
+	width: 100%;
+}
+.center {
+	background-color: rgb(29, 29, 29);
+	height: 100%;
+	width: 100%;
+}
+.main {
+	position: relative;
+	width: 75%;
+	height: 75%;
+	border: 8px solid rgba(255, 255, 255, 0.795);
+	margin: auto;
+	top: 50%;
+	transform: translateY(-50%);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+h1 {
+	text-align: center;
+	color: whitesmoke;
+	font-size: 70px;
+}
+
+img:nth-child(2) {
+	object-fit: cover;
+	width: 210px;
+	height: 220px;
+	position: absolute;
+	z-index: 2;
+	bottom: 0;
+	left: 2%;
+}
+img:nth-child(3) {
+	object-fit: cover;
+	width: 380px;
+	height: 220px;
+	position: absolute;
+	z-index: 2;
+	bottom: 0;
+	right: 9%;
+	transform: rotateX(5deg);
+}
+img:nth-child(4) {
+	object-fit: cover;
+	width: 240px;
+	height: 320px;
+	position: absolute;
+	z-index: 2;
+	bottom: 0;
+	right: 0%;
+}
+.nav {
+	width: 75%;
+	min-height: 10vh;
+	display: flex;
+	position: absolute;
+	top: 3%;
+	align-items: center;
+	justify-content: space-between;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.nav ul {
+	display: flex;
+	list-style: none;
+	width: 100%;
+	align-items: center;
+	justify-content: space-between;
+}
+.nav ul li {
+	font-size: 25px;
+	color: whitesmoke;
+	text-underline-position: auto;
+	text-decoration: underline rgb(242, 242, 242);
+
+	padding: 10px 30px;
+}
+.nav ul li:nth-child(1) {
+	text-decoration: underline yellow;
+}
+p {
+	position: absolute;
+	bottom: 0%;
+	color: whitesmoke;
+	font-size: 25px;
+	text-align: center;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 130px;
+	display: flex;
+	justify-content: space-between;
+	z-index: 100;
+}
+
+span {
+	color: yellow;
+	width: 10px;
+	height: 30px;
+	position: absolute;
+	bottom: 0;
+	left: 55%;
+	display: inline-block;
+	font-size: 20px;
+	transform: translateX(-60%) rotate(90deg) scaleY(1.5);
+	font-weight: bold;
+	animation: jump 1s infinite ease forwards;
+}
+.footer {
+	position: absolute;
+	bottom: 0;
+	color: whitesmoke;
+	left: 4%;
+	font-size: 20px;
+	z-index: 100;
+}
+ul li:hover,
+li {
+	color: yellow;
+}
+li {
+	cursor: pointer;
+}
+@keyframes jump {
+	0% {
+		transform: translateX(-60%) translateY(0px) rotate(90deg) scaleY(1.5);
+	}
+	50% {
+		transform: translateX(-60%) translateY(-10px) rotate(90deg) scaleY(1.5);
+	}
+	90% {
+		transform: translateX(-60%) translateY(0px) rotate(90deg) scaleY(1.5);
+	}
+}
